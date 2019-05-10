@@ -1,10 +1,24 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pinterest</title>
+    <script src="{% static "core/jquery-3.4.1.min.js"%}"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>{% block title %}{% endblock %}</title>
+    <script>
+        $(document).ready(function(){
+            console.log('jquery diala');
+        });
+    </script>
 </head>
 <body>
+<div class="container">
+    <img src="{% static "core/coca-cola-xxl.png" %}" width="100px" height="80px" alt="My image">
+    {% block container %}
+    {% endblock %}
+</div>
 
 </body>
 </html>
